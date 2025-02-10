@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  margin : 0;
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(0, 0, 0);
+  height: 4rem;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  
+  color: white;
+  font-family: "Kanit", serif;
+
+}
+
+.logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  
+}
+
+.logo img{
+  width: 50px;
+  height: 50px;
+}
+
+.companyName{
+  font-size: 1.8rem;
+}
+
+.companyName:hover{
+  color: rgb(255, 129, 129);
+  transition: 0.5s ease-in;
+  cursor: pointer;
+}
+
+.menuItems{
+  display: flex;
+  flex-direction: row;
+  gap: 2.2rem;
+  font-size: 1.1rem;
+}
+
+.menuItems li{
+  list-style: none;
+}
+
+.menuItems li a{
+  text-decoration: none;
+  color: white;
+  font-family: "Kanit", serif;
+}
+
+.menuItems li a:hover{
+  color: rgb(255, 129, 129);
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+
+.medical{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.medical-all{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 5rem;
+  font-family: "Prompt", serif;
+
+
+
+}
+
+.bmi{
+  background-color: rgb(215, 250, 234);
+  padding: 1rem;
+  font-size: 1rem;
+  height: 30rem;
+  border-radius: 2rem;
+  font-family: "Prompt", serif;
+
+}
+
+.bmi h3{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: "Prompt", serif;
+
+}
+
+form h2{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: "Prompt", serif;
+
+}
+
+/* General Container */
+.medical-all {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+  flex-wrap: wrap; /* Allow content to wrap for better responsiveness */
+}
+
+/* Form Styling */
+.form {
+  width: 45%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  max-height: 80vh; /* Limit the form height */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  
+
+}
+
+/* Form Title */
+.form h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Form Field Groups */
+.form div {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Label Styling */
+.form label {
+  font-weight: bold;
+  margin-right: 10px;
+  width: 30%;
+  text-align: right;
+}
+
+/* Input and Select Box Styling */
+.form input,
+.form select,
+.form textarea {
+  width: 65%;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Input Box for Smaller Fields */
+.form input[type="number"],
+.form input[type="text"],
+.form select {
+  height: 30px;
+}
+
+/* Textarea Styling */
+.form textarea {
+  width: 65%;
+  height: 80px;
+  padding: 8px;
+}
+
+/* Button Styling */
+.form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.form button:hover {
+  background-color: #45a049;
+}
+
+.bmi {
+  width: 45%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  overflow-y: auto; /* Allow scrolling if text overflows */
+}
+
+.bmi h3 {
+  text-align: center;
+  color: #333;
+}
+
+.bmi pre {
+  
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: monospace;
+  white-space: pre-wrap; /* Allow long text to wrap */
+  word-wrap: break-word; /* Break long words if necessary */
+  max-height: 75vh; /* Limit height */
+  overflow-y: auto; /* Allow scrolling */
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+h2 {
+  color: #02790a;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.about-container p {
+  line-height: 1.6;
+  font-size: 16px;
+  font-family: "Prompt", serif;
+
+}
+
+.about-container h1, h2, h3, h4, h5, h6,ul{
+  font-family: "Prompt", serif;
+
+}
+
+.about-container ul li {
+  font-size: 16px;
+}
+
+@media (max-width: 850px) {
+  .about-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .about-container p,
+  .about-container ul li {
+    font-size: 14px;
+  }
+}
+
+.homePage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: red;
+  height: 80vh;
+}
+
+.searchCont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer{
+  height: 25rem;
+  font-family: "kanit";
+
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.footerLogo{
+  width: 100px;
+  height: 100px;
+}
+
+.right{
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+hr{
+  width: 50rem;
+}
+
+.bottom{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Home.css */
+.homePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f9;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.homeHeader {
+  text-align: center;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.homeHeader h1 {
+  color: #ffffff;
+  font-size: 4rem;
+  font-family: "kanit";
+}
+
+.homeHeader p {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-family: "kanit";
+
+}
+
+main {
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* HospitalLocator.css */
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: "kanit";
+
+}
+
+.searchInputBox {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-family: kanit;
+
+}
+
+.searchInputBox input {
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.searchInputBox button {
+  padding: 10px 20px;
+  background-color: #2980b9;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: kanit;
+
+}
+
+.searchInputBox button:hover {
+  background-color: #3498db;
+}
+
+.MapContainer {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+}
+
+button {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: "kanit";
+
+}
+
+button:hover {
+  background-color: #2ecc71;
+}
+
+.hos{
+  padding-left:1rem;
+  border-radius: 5rem;
+  width: 30rem;
+  font-size: 1.2rem;
+  height: 3rem;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  font-family: "kanit";
+
+
+}
+
+.ser{
+  display: flex;
+  gap: 1rem;
+  height: 3rem;
+}
+
+.srBtn{
+  width: 10rem;
+  border-radius: 5rem;
+  height: 3rem;
+  font-size: 1.2rem;
+}
+
+.sub:hover{
+  color: rgb(255, 129, 129);
+  transition: 0.1s ease-in;
+  cursor: pointer;
+}
+
+.homePage{
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6), /* Dark overlay */
+      rgba(0, 0, 0, 0.6)
+    ),
+    url('public/hospital.jpg'); /* Your background image */
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image repetition */
+  height: 70vh; /* Adjust as needed */
+}
+
+
+
+.medical{
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6), /* Dark overlay */
+      rgba(0, 0, 0, 0.6)
+    ),
+    url('public/hospital.jpg'); /* Your background image */
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image repetition */
+  height: 100vh; /* Adjust as needed */
+}
+
+.notification {
+  position: absolute;
+  top: 60px;
+  left: 90%;
+  transform: translateX(-50%);
+  background-color: #4caf50; /* Green background */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  z-index: 1000;
+}
+
+.main{
+  font-size: 1.5rem;
+}

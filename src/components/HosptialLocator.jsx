@@ -1,0 +1,83 @@
+import React, { useState } from "react";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css"; // Import Leaflet styles
+
+export default function HospitalLocator() {
+  const [location, setLocation] = useState("");
+  const [coordinates, setCoordinates] = useState(null);
+  const [hospitals, setHospitals] = useState([]);
+  const [notification, setNotification] = useState(""); // State for notification
+
+  const searchLocation = async () => {
+    const response = await fetch(
+      `https://nominatim.openstreetmap.org/search?format=json&q=${location}`
+    );
+    const data = await response.json();
+    if (data.length > 0) {
+      const { lat, lon } = data[0];
+      setCoordinates([parseFloat(lat), parseFloat(lon)]);
+      fetchHospitals(lat, lon);
+    }
+  };
+
+  const fetchHospitals = async (lat, lon) => {
+    const response = await fetch(
+      `https://overpass-api.de/api/interpreter?data=[out:json];node["amenity"="hospital"](around:5000,${lat},${lon});out;`
+    );
+    const data = await response.json();
+    setHospitals(data.elements);
+  };
+
+  // Display the custom notification when the "Inform" button is clicked
+  const handleInform = (hospital) => {
+    setNotification(`Information sent to ${hospital.tags.name || "Hospital"}!`);
+
+    // Hide the notification after 5 seconds
+    setTimeout(() => {
+      setNotification(""); // Reset the notification state
+    }, 5000);
+  };
+
+  return (
+    <div className="searchCont">
+      <div className="ser">
+        <input
+        className="hos"
+          type="text"
+          placeholder="Enter your location"
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
+        />
+        <button className="srBtn"onClick={searchLocation}>Search</button>
+      </div>
+
+      {/* Display the notification if there is one */}
+      {notification && (
+        <div className="notification">
+          {notification}
+        </div>
+      )}
+
+      {coordinates && (
+        <MapContainer
+          center={coordinates}
+          zoom={13}
+          style={{ height: "50vh", width: "50vw" }}
+        >
+          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+          <Marker position={coordinates}>
+            <Popup>Your Location</Popup>
+          </Marker>
+          {hospitals.map((hospital, index) => (
+            <Marker key={index} position={[hospital.lat, hospital.lon]}>
+              <Popup>
+                {hospital.tags.name || "Hospital"} <br />
+                <button onClick={() => handleInform(hospital)}>Inform</button>
+              </Popup>
+            </Marker>
+          ))}
+        </MapContainer>
+      )}
+    </div>
+  );
+}
