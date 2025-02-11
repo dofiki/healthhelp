@@ -4,13 +4,13 @@ const Banner = () => {
   return (
     <nav>
       <div className="logo">
-        <img src="public\Logo512.png" />
+        <img src="/Logo512.png" alt="HealthHelp Logo" />
         <p className="companyName">HealthHelp</p>
-        </div>
+      </div>
       <ul className="menuItems">
         <li><Link to="/">Home</Link></li>
-      
         <li><Link to="/medical-info">Medical Info</Link></li>
+        <li><Link to="/tracker">Tracker</Link></li>
         <li><Link to="/about">About</Link></li>
       </ul>
     </nav>

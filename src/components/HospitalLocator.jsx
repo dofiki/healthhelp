@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css"; // Import Leaflet styles
 
-export default function HospitalLocator() {
+export default function HospitalLocator({ trackerData, setTrackerData }) {
   const [location, setLocation] = useState("");
   const [coordinates, setCoordinates] = useState(null);
   const [hospitals, setHospitals] = useState([]);
@@ -28,13 +28,23 @@ export default function HospitalLocator() {
     setHospitals(data.elements);
   };
 
-  // Display the custom notification when the "Inform" button is clicked
+  // Handle the "Inform" button click
   const handleInform = (hospital) => {
-    setNotification(`Information sent to ${hospital.tags.name || "Hospital"}!`);
+    const hospitalName = hospital.tags.name || "Hospital";
+    const date = new Date().toLocaleDateString(); // Get the current date
+
+    // Add the hospital name and date to the tracker data
+    setTrackerData((prevData) => [
+      ...prevData,
+      { hospitalName, date, details: "" },
+    ]);
+
+    // Show a notification
+    setNotification(`Information sent to ${hospitalName}!`);
 
     // Hide the notification after 5 seconds
     setTimeout(() => {
-      setNotification(""); // Reset the notification state
+      setNotification("");
     }, 5000);
   };
 
@@ -42,21 +52,19 @@ export default function HospitalLocator() {
     <div className="searchCont">
       <div className="ser">
         <input
-        className="hos"
+          className="hos"
           type="text"
           placeholder="Enter your location"
           value={location}
           onChange={(e) => setLocation(e.target.value)}
         />
-        <button className="srBtn"onClick={searchLocation}>Search</button>
+        <button className="srBtn" onClick={searchLocation}>
+          Search
+        </button>
       </div>
 
       {/* Display the notification if there is one */}
-      {notification && (
-        <div className="notification">
-          {notification}
-        </div>
-      )}
+      {notification && <div className="notification">{notification}</div>}
 
       {coordinates && (
         <MapContainer

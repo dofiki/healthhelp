@@ -355,7 +355,6 @@ hr{
   align-items: center;
   background-color: #f4f4f9;
   font-family: Arial, sans-serif;
-  padding: 20px;
 }
 
 .homeHeader {
@@ -495,7 +494,7 @@ button:hover {
   background-size: cover; /* Ensures the image covers the entire element */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents image repetition */
-  height: 70vh; /* Adjust as needed */
+  height: 90vh; /* Adjust as needed */
 }
 
 
@@ -529,4 +528,53 @@ button:hover {
 
 .main{
   font-size: 1.5rem;
+}
+
+.tracker{
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-top:2rem;
+gap:1rem;
+
+}
+
+.btns{
+  display: flex;
+  gap:1rem;
+  padding-top: 1rem;
+}
+
+.dtl{
+  display: flex;
+  height: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+/* Add this to your CSS file */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-content button {
+  margin-top: 10px;
 }
