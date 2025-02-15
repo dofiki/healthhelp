@@ -1,10 +1,8 @@
 const About = () => {
   return (
     <div className="about-container">
-      <h1>About Us</h1>
-      <br/>
       <p>
-        Welcome to our <strong>Medical Info App</strong>, your trusted companion in maintaining and tracking your health information. This platform is designed to simplify the process of collecting and storing personal health data, generating insightful reports, and assisting in emergencies when you need it most. Here’s how our app works:
+        Welcome to our <strong>Health Help app</strong>, your trusted companion in maintaining and tracking your health information. This platform is designed to simplify the process of collecting and storing personal health data, generating insightful reports, and assisting in emergencies when you need it most. Here’s how our app works:
       </p>
       <br/>
       <h2>1. Collecting Your General Information</h2>

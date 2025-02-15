@@ -4,7 +4,7 @@ const Home = ({ trackerData, setTrackerData }) => {
   return (
     <div className="homePage">
       <header className="homeHeader">
-        <h1>Welcome to the HealthHelp</h1>
+        <div className="title">Welcome to the <span style={{color:"#03fd9d", fontWeight:"bolder"}}>HealthHelp</span></div>
         <p>Locate the nearest hospitals and securely share your general health report with them.</p>
       </header>
       <main>

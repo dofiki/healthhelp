@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+
 *{
   margin : 0;
+  font-family:  "Funnel Display", serif;
 }
 
 nav{
   display: flex;
   flex-direction: row;
-  background-color: rgb(0, 0, 0);
+  background-color: #001A6E;
   height: 4rem;
   justify-content: space-around;
   align-items: center;
@@ -19,29 +23,35 @@ nav{
 
 }
 
+.title{
+  font-size: 4rem;
+  color: white;
+}
+
+
+
 .logo{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  filter: drop-shadow(0px 100px 0 #03fd9d);
+  transform: translateY(-100px);
   
 }
 
 .logo img{
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .companyName{
   font-size: 1.8rem;
+  color: #03fd9d;
+
 }
 
-.companyName:hover{
-  color: rgb(255, 129, 129);
-  transition: 0.5s ease-in;
-  cursor: pointer;
-}
 
 .menuItems{
   display: flex;
@@ -57,11 +67,10 @@ nav{
 .menuItems li a{
   text-decoration: none;
   color: white;
-  font-family: "Kanit", serif;
 }
 
 .menuItems li a:hover{
-  color: rgb(255, 129, 129);
+  color: #03fd9d;
   transition: 0.2s ease-in;
   cursor: pointer;
 }
@@ -80,66 +89,60 @@ nav{
   align-items: center;
   height: 100vh;
   gap: 5rem;
-  font-family: "Prompt", serif;
 
 
 
 }
 
 .bmi{
-  background-color: rgb(215, 250, 234);
+  background-color: rgb(18, 11, 135);
   padding: 1rem;
   font-size: 1rem;
   height: 30rem;
   border-radius: 2rem;
-  font-family: "Prompt", serif;
+  font-family:  "Funnel Display", serif;
+
 
 }
 
 .bmi h3{
   padding-top: 1rem;
   padding-bottom: 1rem;
-  font-family: "Prompt", serif;
+  font-family:  "Funnel Display", serif;
+
 
 }
 
 form h2{
   padding-top: 1rem;
   padding-bottom: 1rem;
-  font-family: "Prompt", serif;
-
+  font-family:  "Funnel Display", serif;
 }
 
-/* General Container */
 .medical-all {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  margin: 20px;
-  font-family: Arial, sans-serif;
-  flex-wrap: wrap; /* Allow content to wrap for better responsiveness */
+  align-items: center;
 }
 
-/* Form Styling */
 .form {
   width: 45%;
   padding: 15px;
-  border: 1px solid #ccc;
   border-radius: 8px;
-  background-color: #f9f9f9;
-  box-sizing: border-box;
-  max-height: 80vh; /* Limit the form height */
-  overflow-y: auto; /* Allow scrolling if content overflows */
-  
+  background: rgba(0, 0, 0, 0.3); 
+  backdrop-filter: blur(2px); 
+  color: white; 
+  max-height: 110vh; 
+  border: 1px solid white;
 
 }
 
-/* Form Title */
 .form h2 {
   text-align: center;
-  color: #333;
+  color: #ffffff;
 }
 
-/* Form Field Groups */
 .form div {
   margin-bottom: 12px;
   display: flex;
@@ -147,7 +150,6 @@ form h2{
   justify-content: space-between;
 }
 
-/* Label Styling */
 .form label {
   font-weight: bold;
   margin-right: 10px;
@@ -155,40 +157,40 @@ form h2{
   text-align: right;
 }
 
-/* Input and Select Box Styling */
 .form input,
 .form select,
 .form textarea {
   width: 65%;
   padding: 6px 10px;
-  border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
+  background: rgba(0, 0, 0, 0.5); 
+  backdrop-filter: blur(2px); 
+  color: white;
+  border: none;
 }
 
-/* Input Box for Smaller Fields */
 .form input[type="number"],
 .form input[type="text"],
 .form select {
   height: 30px;
 }
 
-/* Textarea Styling */
 .form textarea {
   width: 65%;
   height: 80px;
   padding: 8px;
 }
 
-/* Button Styling */
 .form button {
-  background-color: #4CAF50;
+  background-color: #001A6E;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   width: 100%;
+  font-weight: bolder;
 }
 
 .form button:hover {
@@ -198,35 +200,40 @@ form h2{
 .bmi {
   width: 45%;
   padding: 20px;
-  border: 1px solid #ccc;
   border-radius: 8px;
-  background-color: #f9f9f9;
-  box-sizing: border-box;
-  overflow-y: auto; /* Allow scrolling if text overflows */
+  background: rgba(0, 0, 0, 0.3); 
+  backdrop-filter: blur(2px); 
+  overflow-y: auto; 
+  color: white;
+  border: 1px solid white;
 }
 
 .bmi h3 {
   text-align: center;
-  color: #333;
+  color: #ffffff;
+  font-family: ;
 }
 
 .bmi pre {
   
-  background-color: #e0e0e0;
+  
   padding: 10px;
   border-radius: 4px;
   font-family: monospace;
   white-space: pre-wrap; /* Allow long text to wrap */
   word-wrap: break-word; /* Break long words if necessary */
   max-height: 75vh; /* Limit height */
-  overflow-y: auto; /* Allow scrolling */
 }
 
 .about-container {
-  max-width: 800px;
+  max-width: 100vw;
   margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  padding-top: 5rem;
+  padding-left: 15rem;
+  padding-right:15rem;
+  padding-bottom: 5rem;
+  background-color: #074799;
+  color: white;
 }
 
 h1 {
@@ -235,7 +242,7 @@ h1 {
 }
 
 h2 {
-  color: #02790a;
+  color: #03fd9d;
 }
 
 ul {
@@ -254,12 +261,10 @@ strong {
 .about-container p {
   line-height: 1.6;
   font-size: 16px;
-  font-family: "Prompt", serif;
 
 }
 
 .about-container h1, h2, h3, h4, h5, h6,ul{
-  font-family: "Prompt", serif;
 
 }
 
@@ -267,24 +272,7 @@ strong {
   font-size: 16px;
 }
 
-@media (max-width: 850px) {
-  .about-container {
-    padding: 10px;
-  }
 
-  h1 {
-    font-size: 24px;
-  }
-
-  h2 {
-    font-size: 20px;
-  }
-
-  .about-container p,
-  .about-container ul li {
-    font-size: 14px;
-  }
-}
 
 .homePage{
   display: flex;
@@ -306,9 +294,10 @@ strong {
 
 .footer{
   height: 25rem;
-  font-family: "kanit";
-
-  background-color: black;
+  background-color: #001A6E;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect stroke='%23001A6E' stroke-width='0.6' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='3' height='3' patternUnits='userSpaceOnUse' patternTransform='scale(11.9) translate(-915.97 -686.97)'%3E%3Cuse fill='%23242c73' href='%23s' y='2'/%3E%3Cuse fill='%23242c73' href='%23s' x='1' y='2'/%3E%3Cuse fill='%23333977' href='%23s' x='2' y='2'/%3E%3Cuse fill='%23333977' href='%23s'/%3E%3Cuse fill='%233e437c' href='%23s' x='2'/%3E%3Cuse fill='%233e437c' href='%23s' x='1' y='1'/%3E%3C/pattern%3E%3Cpattern id='b' width='7' height='11' patternUnits='userSpaceOnUse' patternTransform='scale(11.9) translate(-915.97 -686.97)'%3E%3Cg fill='%23484c80'%3E%3Cuse href='%23s'/%3E%3Cuse href='%23s' y='5' /%3E%3Cuse href='%23s' x='1' y='10'/%3E%3Cuse href='%23s' x='2' y='1'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='8'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='5' y='2'/%3E%3Cuse href='%23s' x='5' y='6'/%3E%3Cuse href='%23s' x='6' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='h' width='5' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(11.9) translate(-915.97 -686.97)'%3E%3Cg fill='%23484c80'%3E%3Cuse href='%23s' y='5'/%3E%3Cuse href='%23s' y='8'/%3E%3Cuse href='%23s' x='1' y='1'/%3E%3Cuse href='%23s' x='1' y='9'/%3E%3Cuse href='%23s' x='1' y='12'/%3E%3Cuse href='%23s' x='2'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='2'/%3E%3Cuse href='%23s' x='3' y='6'/%3E%3Cuse href='%23s' x='3' y='11'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='4' y='10'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='17' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(11.9) translate(-915.97 -686.97)'%3E%3Cg fill='%23515484'%3E%3Cuse href='%23s' y='11'/%3E%3Cuse href='%23s' x='2' y='9'/%3E%3Cuse href='%23s' x='5' y='12'/%3E%3Cuse href='%23s' x='9' y='4'/%3E%3Cuse href='%23s' x='12' y='1'/%3E%3Cuse href='%23s' x='16' y='6'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='19' height='17' patternUnits='userSpaceOnUse' patternTransform='scale(11.9) translate(-915.97 -686.97)'%3E%3Cg fill='%23001A6E'%3E%3Cuse href='%23s' y='9'/%3E%3Cuse href='%23s' x='16' y='5'/%3E%3Cuse href='%23s' x='14' y='2'/%3E%3Cuse href='%23s' x='11' y='11'/%3E%3Cuse href='%23s' x='6' y='14'/%3E%3C/g%3E%3Cg fill='%23585c88'%3E%3Cuse href='%23s' x='3' y='13'/%3E%3Cuse href='%23s' x='9' y='7'/%3E%3Cuse href='%23s' x='13' y='10'/%3E%3Cuse href='%23s' x='15' y='4'/%3E%3Cuse href='%23s' x='18' y='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='53' patternUnits='userSpaceOnUse' patternTransform='scale(11.9) translate(-915.97 -686.97)'%3E%3Cg fill='%23009990'%3E%3Cuse href='%23s' x='2' y='5'/%3E%3Cuse href='%23s' x='16' y='38'/%3E%3Cuse href='%23s' x='46' y='42'/%3E%3Cuse href='%23s' x='29' y='20'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='59' height='71' patternUnits='userSpaceOnUse' patternTransform='scale(11.9) translate(-915.97 -686.97)'%3E%3Cg fill='%23009990'%3E%3Cuse href='%23s' x='33' y='13'/%3E%3Cuse href='%23s' x='27' y='54'/%3E%3Cuse href='%23s' x='55' y='55'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='g' width='139' height='97' patternUnits='userSpaceOnUse' patternTransform='scale(11.9) translate(-915.97 -686.97)'%3E%3Cg fill='%23009990'%3E%3Cuse href='%23s' x='11' y='8'/%3E%3Cuse href='%23s' x='51' y='13'/%3E%3Cuse href='%23s' x='17' y='73'/%3E%3Cuse href='%23s' x='99' y='57'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23b)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23h)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23c)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23d)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23e)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23f)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23g)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
   color: white;
   display: flex;
   flex-direction: column;
@@ -316,6 +305,19 @@ strong {
   align-items: center;
 }
 
+
+
+.navigation a{
+  display: flex;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: white;
+}
+
+.navigation a:hover{
+  color:#EFE3C2;
+
+}
 .top{
   display: flex;
   justify-content: center;
@@ -357,6 +359,11 @@ hr{
   font-family: Arial, sans-serif;
 }
 
+.navigation{
+  display: flex;
+  flex-direction: column;
+}
+
 .homeHeader {
   text-align: center;
   margin-bottom: 30px;
@@ -368,13 +375,11 @@ hr{
 .homeHeader h1 {
   color: #ffffff;
   font-size: 4rem;
-  font-family: "kanit";
 }
 
 .homeHeader p {
   color: #ffffff;
   font-size: 1.5rem;
-  font-family: "kanit";
 
 }
 
@@ -402,8 +407,6 @@ main {
   justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
-  font-family: kanit;
-
 }
 
 .searchInputBox input {
@@ -443,12 +446,11 @@ button {
   padding: 8px 16px;
   cursor: pointer;
   border-radius: 4px;
-  font-family: "kanit";
 
 }
 
 button:hover {
-  background-color: #2ecc71;
+  
 }
 
 .hos{
@@ -460,9 +462,19 @@ button:hover {
   display: flex;
   justify-self: center;
   align-self: center;
-  font-family: "kanit";
 
+}
 
+.hos:hover{
+  outline: 10px solid #074799 ;
+}
+
+.hos:focus{
+  outline: 10px solid #074799 ;
+  }
+
+.hos::placeholder{
+  font-size: 1rem;
 }
 
 .ser{
@@ -476,10 +488,24 @@ button:hover {
   border-radius: 5rem;
   height: 3rem;
   font-size: 1.2rem;
+  background-color: rgb(0, 0, 0, 0.1);
+  color: white;
+  border: 2px solid white;
+}
+
+.srBtn:hover{
+  background-color: #001A6E;
+  transition: 0.1s ease-in;
+
+}
+
+.sub-section{
+  font-size: 0.9rem;
+  padding-top: 1rem;
 }
 
 .sub:hover{
-  color: rgb(255, 129, 129);
+  color:#EFE3C2;
   transition: 0.1s ease-in;
   cursor: pointer;
 }
@@ -490,11 +516,10 @@ button:hover {
       rgba(0, 0, 0, 0.6), /* Dark overlay */
       rgba(0, 0, 0, 0.6)
     ),
-    url('/hospital.jpg'); /* Your background image */
-  background-size: cover; /* Ensures the image covers the entire element */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents image repetition */
-  height: 90vh; /* Adjust as needed */
+    url('public/hospital.jpg'); /* Your background image */
+    background-attachment: fixed;
+    background-size: cover; 
+  height: 100vh; /* Adjust as needed */
 }
 
 
@@ -509,7 +534,8 @@ button:hover {
   background-size: cover; /* Ensures the image covers the entire element */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents image repetition */
-  height: 100vh; /* Adjust as needed */
+  height: 120vh; /* Adjust as needed */
+
 }
 
 .notification {
@@ -517,7 +543,7 @@ button:hover {
   top: 60px;
   left: 90%;
   transform: translateX(-50%);
-  background-color: #4caf50; /* Green background */
+  background-color: #009990; /* Green background */
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -527,7 +553,12 @@ button:hover {
 }
 
 .main{
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+main{
+  margin-bottom: 8rem;
 }
 
 .tracker{
@@ -537,6 +568,13 @@ flex-direction: column;
 align-items: center;
 padding-top:2rem;
 gap:1rem;
+background-color: #074799;
+
+
+}
+
+.tracker ul {
+  color:white;
 
 }
 
@@ -546,11 +584,27 @@ gap:1rem;
   padding-top: 1rem;
 }
 
+.btns button{
+  background-color: #001A6E;
+  color: white;
+  font-weight: bolder;
+  outline: 1px solid white;
+}
+
+.addDetail{
+  background-color: #001A6E;
+  color: white;
+  font-weight: bolder;
+  outline: 1px solid white;
+}
 .dtl{
   display: flex;
   height: 2rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  width: 15rem;
+  padding-left: 1rem;
+
 }
 
 
@@ -577,4 +631,111 @@ gap:1rem;
 
 .modal-content button {
   margin-top: 10px;
+}
+
+.modal button{
+  background-color: #001A6E;
+  color: white;
+  font-weight: bolder;
+  outline: 1px solid white;
+}
+
+@media (max-width:935px){
+
+  .nav{
+    width: 100vw;
+  }
+  
+  .ul .menuItems{
+    display: none;
+  }
+  .menuItems li a{
+    display: none;
+  }
+
+.ser{
+  display: flex;
+  flex-direction: row;
+  width: 30rem;
+  justify-content: center;
+  
+
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.homeHeader {
+  width: 25rem;
+
+  font-size: 3rem;
+  color: white;
+  gap :2rem;
+}
+
+.searchCont{
+  width: 20rem;
+}
+
+.right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.homePage{
+  width: 100vw;
+}
+.sub-section{
+  text-align: center;
+}
+
+
+hr{
+  width: 10rem;
+}
+
+.footer{
+  height: 80vh;
+  background-color: #001A6E;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect stroke='%23001A6E' stroke-width='0.6' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='3' height='3' patternUnits='userSpaceOnUse' patternTransform='scale(11.9) translate(-915.97 -686.97)'%3E%3Cuse fill='%23242c73' href='%23s' y='2'/%3E%3Cuse fill='%23242c73' href='%23s' x='1' y='2'/%3E%3Cuse fill='%23333977' href='%23s' x='2' y='2'/%3E%3Cuse fill='%23333977' href='%23s'/%3E%3Cuse fill='%233e437c' href='%23s' x='2'/%3E%3Cuse fill='%233e437c' href='%23s' x='1' y='1'/%3E%3C/pattern%3E%3Cpattern id='b' width='7' height='11' patternUnits='userSpaceOnUse' patternTransform='scale(11.9) translate(-915.97 -686.97)'%3E%3Cg fill='%23484c80'%3E%3Cuse href='%23s'/%3E%3Cuse href='%23s' y='5' /%3E%3Cuse href='%23s' x='1' y='10'/%3E%3Cuse href='%23s' x='2' y='1'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='8'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='5' y='2'/%3E%3Cuse href='%23s' x='5' y='6'/%3E%3Cuse href='%23s' x='6' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='h' width='5' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(11.9) translate(-915.97 -686.97)'%3E%3Cg fill='%23484c80'%3E%3Cuse href='%23s' y='5'/%3E%3Cuse href='%23s' y='8'/%3E%3Cuse href='%23s' x='1' y='1'/%3E%3Cuse href='%23s' x='1' y='9'/%3E%3Cuse href='%23s' x='1' y='12'/%3E%3Cuse href='%23s' x='2'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='2'/%3E%3Cuse href='%23s' x='3' y='6'/%3E%3Cuse href='%23s' x='3' y='11'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='4' y='10'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='17' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(11.9) translate(-915.97 -686.97)'%3E%3Cg fill='%23515484'%3E%3Cuse href='%23s' y='11'/%3E%3Cuse href='%23s' x='2' y='9'/%3E%3Cuse href='%23s' x='5' y='12'/%3E%3Cuse href='%23s' x='9' y='4'/%3E%3Cuse href='%23s' x='12' y='1'/%3E%3Cuse href='%23s' x='16' y='6'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='19' height='17' patternUnits='userSpaceOnUse' patternTransform='scale(11.9) translate(-915.97 -686.97)'%3E%3Cg fill='%23001A6E'%3E%3Cuse href='%23s' y='9'/%3E%3Cuse href='%23s' x='16' y='5'/%3E%3Cuse href='%23s' x='14' y='2'/%3E%3Cuse href='%23s' x='11' y='11'/%3E%3Cuse href='%23s' x='6' y='14'/%3E%3C/g%3E%3Cg fill='%23585c88'%3E%3Cuse href='%23s' x='3' y='13'/%3E%3Cuse href='%23s' x='9' y='7'/%3E%3Cuse href='%23s' x='13' y='10'/%3E%3Cuse href='%23s' x='15' y='4'/%3E%3Cuse href='%23s' x='18' y='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='53' patternUnits='userSpaceOnUse' patternTransform='scale(11.9) translate(-915.97 -686.97)'%3E%3Cg fill='%23009990'%3E%3Cuse href='%23s' x='2' y='5'/%3E%3Cuse href='%23s' x='16' y='38'/%3E%3Cuse href='%23s' x='46' y='42'/%3E%3Cuse href='%23s' x='29' y='20'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='59' height='71' patternUnits='userSpaceOnUse' patternTransform='scale(11.9) translate(-915.97 -686.97)'%3E%3Cg fill='%23009990'%3E%3Cuse href='%23s' x='33' y='13'/%3E%3Cuse href='%23s' x='27' y='54'/%3E%3Cuse href='%23s' x='55' y='55'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='g' width='139' height='97' patternUnits='userSpaceOnUse' patternTransform='scale(11.9) translate(-915.97 -686.97)'%3E%3Cg fill='%23009990'%3E%3Cuse href='%23s' x='11' y='8'/%3E%3Cuse href='%23s' x='51' y='13'/%3E%3Cuse href='%23s' x='17' y='73'/%3E%3Cuse href='%23s' x='99' y='57'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23b)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23h)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23c)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23d)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23e)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23f)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23g)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.medical-all{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 200vh;
+}
+}
+
+@media (max-width:560px){
+  
+    .ser{
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      justify-content: center;
+      align-items: center;
+      
+  }
+
+  .hos{
+    width: 15rem;
+    padding: 2rem;
+    
+  }
 }

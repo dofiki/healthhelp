@@ -5,7 +5,7 @@ const Banner = () => {
     <nav>
       <div className="logo">
         <img src="/Logo512.png" alt="HealthHelp Logo" />
-        <p className="companyName">HealthHelp</p>
+        <p className="companyName">Health<span style={{fontWeight:"bold"}}>Help</span></p>
       </div>
       <ul className="menuItems">
         <li><Link to="/">Home</Link></li>

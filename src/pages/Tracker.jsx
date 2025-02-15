@@ -58,7 +58,7 @@ export default function Tracker({ trackerData, setTrackerData }) {
                   value={detailsInput}
                   onChange={(e) => setDetailsInput(e.target.value)}
                 />
-                <button onClick={() => handleAddDetails(index)}>Add Details</button>
+                <button className="addDetail" onClick={() => handleAddDetails(index)}>Add Details</button>
               </>
             )}
           </li>
