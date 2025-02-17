@@ -805,8 +805,19 @@ hr{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 150vh;
+  height: 100vh;
 }
+
+.form{
+  height: 30rem;
+  overflow-y: scroll;
+}
+
+.bmi{
+  height: 30rem;
+  overflow-y: scroll;
+}
+
 }
 
 @media (max-width:620px){
@@ -845,6 +856,7 @@ hr{
 
   .form{
     width: 20rem;
+
   }
 
   .bmi{
@@ -899,3 +911,4 @@ hr{
 .informButton:hover {
   background-color: #002244;  /* Darker blue on hover */
 }
+
