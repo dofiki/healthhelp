@@ -67,24 +67,26 @@ export default function HospitalLocator({ trackerData, setTrackerData }) {
       {notification && <div className="notification">{notification}</div>}
 
       {coordinates && (
-        <MapContainer
-          center={coordinates}
-          zoom={13}
-          style={{ height: "50vh", width: "50vw" }}
-        >
-          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-          <Marker position={coordinates}>
-            <Popup>Your Location</Popup>
-          </Marker>
-          {hospitals.map((hospital, index) => (
-            <Marker key={index} position={[hospital.lat, hospital.lon]}>
-              <Popup>
-                {hospital.tags.name || "Hospital"} <br />
-                <button onClick={() => handleInform(hospital)}>Inform</button>
-              </Popup>
+        <div className="mapContainer">
+          <MapContainer
+            center={coordinates}
+            zoom={13}
+            style={{ height: "50vh", width: "50vw" }}
+          >
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+            <Marker position={coordinates}>
+              <Popup>Your Location</Popup>
             </Marker>
-          ))}
-        </MapContainer>
+            {hospitals.map((hospital, index) => (
+              <Marker key={index} position={[hospital.lat, hospital.lon]}>
+                <Popup>
+                  {hospital.tags.name || "Hospital"} <br />
+                  <button className="informButton" onClick={() => handleInform(hospital)}>Inform</button>
+                </Popup>
+              </Marker>
+            ))}
+          </MapContainer>
+        </div>
       )}
     </div>
   );
